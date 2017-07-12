@@ -95,7 +95,11 @@ namespace VisageSharp.Features
             {
                 if (Utils.SleepCheck("MousePosition"))
                 {
-                    me.Move(Game.MousePosition);
+                    foreach (var f in familiars)
+                    {
+                        f.Move(Game.MousePosition);
+                    }
+                    //me.Move(Game.MousePosition);
                     Utils.Sleep(150, "MousePosition");
                 }
 
@@ -168,15 +172,15 @@ namespace VisageSharp.Features
             else
             {
                 // go towards target
-                if (me.CanMove())
-                {
+                //if (me.CanMove())
+                //{
 
-                    if (Utils.SleepCheck("move"))
-                    {
-                        //me.Move(target.Position);
-                        Utils.Sleep(100, "move");
-                    }
-                }   
+                //    if (Utils.SleepCheck("move"))
+                //    {
+                //        //me.Move(target.Position);
+                //        Utils.Sleep(100, "move");
+                //    }
+                //}   
                              
                 //Orbwalk
                 //if (Utils.SleepCheck("orbwalk"))
